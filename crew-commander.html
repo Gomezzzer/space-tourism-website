@@ -17,60 +17,44 @@
   <script src="index.js" defer></script>
 </head>
 
-
-<body class="destination">
+<body class="crew">
   <a class="skip-to-content" href="#main">Skip to content</a>
   <header class="primary-header flex">
     <div>
       <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
     </div>
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
-     <nav>
+    <nav>
         <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
             <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
             <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
             <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
             <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
         </ul>
-    </nav> 
+    </nav>
   </header>
-
-
-  <main id="main" class="grid-container grid-container--destination flow">
-    <h1 class="numbered-title"><span aria-hidden="true">01</span> Pick your destination</h1>
   
-    <img src="assets/destination/image-moon.png" alt="the moon">
-
-    <div class="tab-list underline-indicators flex">
-        <button aria-selected="true" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Moon</button>
-        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Mars</button>
-        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Europa</button>
-        <button aria-selected="false" class="uppercase ff-sans-cond text-accent bg-dark letter-spacing-2">Titan</button>
+  <main id="main" class="grid-container grid-container--crew flow">
+    <h1 class="numbered-title"><span aria-hidden="true">02</span> Meet your crew</h1>
+    <div class="dot-indicators flex">
+        <button aria-selected="true"><span class="sr-only">The commander</span></button>
+        <button aria-selected="false"><span class="sr-only">The mission specialist</span></button>
+        <button aria-selected="false"><span class="sr-only">The pilot</span></button>
+        <button aria-selected="false"><span class="sr-only">The crew engineer</span></button>
     </div>
-
-    <article class="destination-info">
-      <h2 class="fs-800 uppercase ff-serif">Moon</h2>
-  
-      <p>See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
-      regain perspective and come back refreshed. While you’re there, take in some history 
-      by visiting the Luna 2 and Apollo 11 landing sites.</p>
-  
-      <div class="destination-meta flex">
-        <div>
-            <h3 class="text-accent fs-200 uppercase">Avg. distance</h3>
-            <p class="ff-serif uppercase">384,400 km</p>
-        </div>
-    
-        <div>
-            <h3 class="text-accent fs-200 uppercase">Est. travel time</h3>
-            <p class="ff-serif uppercase">3 days</p>
-        </div>
-      </div>
-
+    <article class="crew-details flow">
+      <header class="flow flow--space-small">
+        <h2 class="fs-600 ff-serif uppercase">Commander</h2>
+        <p class="fs-700 uppercase ff-serif">Douglas Hurley</p>
+      </header>  
+      <p>Douglas Gerald Hurley is an American engineer, former Marine Corps pilot 
+      and former NASA astronaut. He launched into space for the third time as 
+      commander of Crew Dragon Demo-2.</p>
     </article>
-    </main>
-
-  <body>
-
-  </body>
-  </html>
+    <picture>
+        <source srcset="assets/crew/image-douglas-hurley.png" type="image/webp">    
+        <img src="assets/crew/image-douglas-hurley.png" alt="Douglas Hurley">
+    </picture>
+  </main>
+</body>
+</html>
