@@ -670,5 +670,9 @@ body {
     .grid-container--crew > picture {
         align-self: end;
     }
+  
+}
 
+[role="tab"]:focus {
+    color: limegreen;
 }
