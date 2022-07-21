@@ -633,19 +633,63 @@ body {
     opacity: .5;
 }
 
-@media (min-width: 35em) {
-    .numbered-title {
+/* technology layout */
+
+.grid-container--technology {
+    place-items: center;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
+        overflow: hidden;
+}
+
+.grid-container--technology > picture {
+    grid-area: image;
+    max-width: 100%;
+}
+
+.grid-container--technology > .number-indicators {
+    grid-area: tabs;
+    --flow-space: 3rem;
+    margin-bottom: 2rem;
+}
+
+.grid-container--technology > .technology-details {
+    grid-area: content;
+    padding: 1rem;
+}
+
+.technology-details p {
+    padding-inline: 1.5rem;
+}
+
+.grid-container:is(.grid-container--technology) {
+    padding-inline: 0;
+  }
+
+.grid-container--technology #launch-image-portrait,
+  #image-spaceport-portrait, #image-space-capsule-portrait {
+      display: none;
+  }
+
+
+
+@media (min-width: 35em) and (max-width: 45em) {
+
+   .numbered-title {
         justify-self: start;
         margin-top: 2rem;
     }
 
 
-.destination-meta {
+  .destination-meta {
     flex-direction: row;    
     justify-content: space-evenly;
 }
 
-.grid-container--crew {
+  .grid-container--crew {
     padding-bottom: 0;
     grid-template-areas: 
         'title'
@@ -654,9 +698,42 @@ body {
         'image';
 }
 
+.grid-container--technology {
+    place-items: center;
+    grid-template-areas: 
+        'title'
+        'image'
+        'tabs'
+        'content';
 }
 
-@media (min-width: 45em) {
+.grid-container--technology > .number-indicators {
+    --flow-space: 1rem;
+}
+
+.grid-container--technology > picture {
+    margin: 0;
+    padding: 0;
+}
+
+.grid-container--technology .numbered-title {
+    padding-left: 1rem;
+}
+
+.number-indicators > button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+}
+
+.grid-container--technology .numbered-title {
+    padding-left: 4rem;
+}
+
+}
+
+
+@media (min-width: 55em) {
     .grid-container {
         text-align: left;
         column-gap: var(--container-gap, 2rem);
@@ -705,39 +782,72 @@ body {
             
     }
 
-    /*.grid-container--crew > .dot-indicators {
-        justify-self: start;
-    }
-    */
     .grid-container--crew > picture {
         grid-column: span 2;
         align-self: end;
         max-width: 90%;
     }
+    
+    .grid-container--technology {
+    
+        justify-items: start;
+        grid-template-areas: 
+            ". title title title"
+            ". tabs content image"
+            ". . . . ";
+        grid-template-columns:  minmax(2rem, 0.5fr) minmax(0, 40rem); 
+        grid-template-rows: 20% 2fr;
+        padding-left: 0;          
+    }
+ 
+    .grid-container--technology > picture {
+        grid-column: span 2;
+        place-items: start right;
+        max-width: 100%;
+    }
+    
+    .grid-container--technology > .number-indicators {
+        flex-direction: column;
+        place-self: start left;
+        margin-top: 9rem;
+        margin-left: 4rem;
+    }
+
+    .grid-container--technology > details {
+        align-self: center;
+        place-self: start left;
+        margin-top: 4rem;
+    }
+
+
+    .grid-container--technology #launch-image-landscape, 
+    #image-spaceport-landscape, #image-space-capsule-landscape {
+        display:none;
+    }
+
+    .grid-container--technology #launch-image-portrait,
+    #image-spaceport-portrait, #image-space-capsule-portrait{
+        display:block;
+    } 
+
+    .number-indicators > button {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+    }
+
+    .grid-container--technology .numbered-title {
+        padding-left: 4rem;
+    }
+
+}
+
+
+
+
+
   
-}
 
-/* technology layout */
 
-.grid-container--technology {
-    --flow-space: 3rem;
-    grid-template-areas: 
-        'title'
-        'image'
-        'tabs'
-        'content';
-}
 
-.grid-container--technology > picture {
-    grid-area: image;
-    max-width: 100%;
-}
-
-.grid-container--technology > .number-indicators {
-    grid-area: tabs;
-}
-
-.grid-container--technology > .technology-details {
-    grid-area: content;
-}
 
