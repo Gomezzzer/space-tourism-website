@@ -653,12 +653,13 @@ body {
 .grid-container--technology > .number-indicators {
     grid-area: tabs;
     --flow-space: 3rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: -1rem;
 }
 
 .grid-container--technology > .technology-details {
     grid-area: content;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .technology-details p {
@@ -707,6 +708,10 @@ body {
         'content';
 }
 
+.grid-container--technology .numbered-title  {
+    margin-bottom: 2rem;
+}
+
 .grid-container--technology > .number-indicators {
     --flow-space: 1rem;
 }
@@ -717,22 +722,42 @@ body {
 }
 
 .grid-container--technology .numbered-title {
-    padding-left: 1rem;
-}
-
-.number-indicators > button {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-}
-
-.grid-container--technology .numbered-title {
-    padding-left: 4rem;
-}
-
+    padding-left: -20rem;
 }
 
 
+}
+
+@media (min-width: 48em) {
+    .number-indicators > button {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+    }
+
+    .grid-container--technology > picture {
+        margin: 0;
+        padding: 0;
+    } 
+
+    .grid-container--technology .numbered-title {
+        padding-bottom: 3rem;
+        margin-left: -24rem;
+    }
+}
+
+@media (min-width: 51em) and (max-width: 55em) {
+    .number-indicators > button {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+    }
+
+    .grid-container--technology .numbered-title {
+        padding-bottom: 3rem;
+        margin-left: -28rem;
+    }
+}
 @media (min-width: 55em) {
     .grid-container {
         text-align: left;
@@ -819,6 +844,9 @@ body {
         margin-top: 4rem;
     }
 
+    .technology-details p {
+        padding-inline: 0.5rem;
+    }
 
     .grid-container--technology #launch-image-landscape, 
     #image-spaceport-landscape, #image-space-capsule-landscape {
@@ -831,13 +859,13 @@ body {
     } 
 
     .number-indicators > button {
-        width: 4rem;
-        height: 4rem;
+        width: 3.5rem;
+        height: 3.5rem;
         border-radius: 50%;
     }
 
     .grid-container--technology .numbered-title {
-        padding-left: 4rem;
+        margin-left: 4rem;
     }
 
 }
