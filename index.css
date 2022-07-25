@@ -758,6 +758,7 @@ body {
         margin-left: -28rem;
     }
 }
+
 @media (min-width: 55em) {
     .grid-container {
         text-align: left;
@@ -803,8 +804,7 @@ body {
         grid-template-areas: 
             '. title title .'
             '. content image .'
-            '. tabs image .';
-            
+            '. tabs image .';     
     }
 
     .grid-container--crew > picture {
@@ -829,12 +829,13 @@ body {
         grid-column: span 2;
         place-items: start right;
         max-width: 100%;
+        
     }
     
     .grid-container--technology > .number-indicators {
         flex-direction: column;
         place-self: start left;
-        margin-top: 9rem;
+        margin-top: 8rem;
         margin-left: 4rem;
     }
 
@@ -843,7 +844,13 @@ body {
         place-self: start left;
         margin-top: 4rem;
     }
-
+    
+    .grid-container--technology > .technology-details {
+        grid-area: content;
+        padding-right: 2rem;
+        padding-left: 1rem;
+    }
+     
     .technology-details p {
         padding-inline: 0.5rem;
     }
@@ -862,6 +869,7 @@ body {
         width: 3.5rem;
         height: 3.5rem;
         border-radius: 50%;
+        margin-bottom: 1rem;
     }
 
     .grid-container--technology .numbered-title {
@@ -869,6 +877,23 @@ body {
     }
 
 }
+
+@media (min-width: 80em) {
+    .grid-container--technology > .technology-details {
+        grid-area: content;
+        padding-right: 7rem;
+        padding-left: 0rem;
+    }
+
+    .number-indicators > button {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+
 
 
 
